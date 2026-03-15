@@ -1,0 +1,4 @@
+skyfield
+pandas
+gpiozero
+RPLCD

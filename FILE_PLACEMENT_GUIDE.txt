@@ -1,0 +1,29 @@
+GitHub File Placement Guide
+===========================
+
+Repository root:
+  README.md
+  requirements.txt
+  .gitignore
+  FILE_PLACEMENT_GUIDE.txt
+  install_pi.sh
+  telescope_control.py
+  de421.bsp
+  hip_bright.csv
+  dso_catalog.csv
+  hip_main.dat
+
+docs/:
+  architecture_manual.pdf
+
+Important:
+The current code expects de421.bsp, hip_bright.csv, and dso_catalog.csv
+in the same directory as telescope_control.py.
+
+The current code does NOT point to hip_main.dat.
+It currently points to:
+  HIP_MAIN_PATH = "./hip_main.csv"
+
+If you want the full Hipparcos catalog file to be used, edit that line in
+telescope_control.py to:
+  HIP_MAIN_PATH = "./hip_main.dat"
